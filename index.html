@@ -297,7 +297,6 @@ footer{text-align:center;padding:40px 32px 24px;font-size:11px;color:#bbb;letter
         <h3>广东工业大学华立学院</h3>
         <p>英语专业（翻译与口译方向）文学学士。英语专业八级。</p>
         <div class="tl-tag-list">
-          <span class="tl-tag">TEM-8</span>
         </div>
       </div>
       <div class="tl-dot"><div class="tl-dot-inner"></div></div>
@@ -317,20 +316,17 @@ footer{text-align:center;padding:40px 32px 24px;font-size:11px;color:#bbb;letter
     <div class="cert-item">
       <div class="cert-icon">🎓</div>
       <div class="cert-name">高中英语教师资格证</div>
-      <div class="cert-sub">全国通用</div>
     </div>
 
     <div class="cert-item cert-clickable" onclick="openModal('modal-toefl')">
       <div class="cert-icon">📄</div>
       <div class="cert-name">托福考试总分 109</div>
-      <div class="cert-sub">Best 112 · R30 / L30 / S25 / W27</div>
       <div class="cert-hint">点击查看成绩单 →</div>
     </div>
 
     <div class="cert-item">
       <div class="cert-icon">📝</div>
       <div class="cert-name">英语专业八级 TEM-8</div>
-      <div class="cert-sub">英语语言文学专业最高级别资格</div>
     </div>
 
   </div>
@@ -405,7 +401,7 @@ footer{text-align:center;padding:40px 32px 24px;font-size:11px;color:#bbb;letter
 
   <!-- Materials -->
   <p style="margin-bottom:20px;">担任学科带头人期间独立研发的系列教学材料。点击卡片查看详情与内页预览。</p>
-  <div class="card-grid">
+  <div class="card-grid" style="grid-template-columns:repeat(3,1fr);">
 
     <div class="clickable-card" onclick="openModal('modal-vocab')">
       <div class="card-thumb">
@@ -451,6 +447,29 @@ footer{text-align:center;padding:40px 32px 24px;font-size:11px;color:#bbb;letter
       </div>
     </div>
 
+    <div class="clickable-card" onclick="openModal('modal-sat-vocab')">
+  <div class="card-thumb">
+    <div class="thumb-placeholder"><span class="icon">📊</span><span>替换为截图</span></div>
+  </div>
+  <div class="card-body">
+    <div class="card-title">SAT机考真题词汇表</div>
+    <div class="card-desc">SAT机考高频词汇系统整理</div>
+    <div class="card-hint">点击查看 →</div>
+  </div>
+</div>
+
+<div class="clickable-card" onclick="openModal('modal-toefl-analysis')">
+  <div class="card-thumb">
+    <div class="thumb-placeholder"><span class="icon">📈</span><span>替换为截图</span></div>
+  </div>
+  <div class="card-body">
+    <div class="card-title">托福听力历年考情分析（2018–2025）</div>
+    <div class="card-desc">7年连续考情追踪与趋势研判</div>
+    <div class="card-hint">点击查看 →</div>
+  </div>
+</div>
+
+
   </div>
 
   <!-- Activities -->
@@ -487,6 +506,16 @@ footer{text-align:center;padding:40px 32px 24px;font-size:11px;color:#bbb;letter
       </div>
       <div class="activity-body">
         <div class="activity-title">新教师培训</div>
+        <div class="activity-card" onclick="openModal('modal-act4')">
+  <div class="activity-thumb">
+    <div class="thumb-placeholder"><span class="icon">🖥</span><span>替换为讲座截图</span></div>
+  </div>
+  <div class="activity-body">
+    <div class="activity-title">线上讲座</div>
+    <div class="activity-sub">在线授课 · 直播分享</div>
+    <div class="activity-hint">点击查看详情 →</div>
+  </div>
+</div>
         <div class="activity-sub">季度举办 · 累计100+名</div>
         <div class="activity-hint">点击查看详情 →</div>
       </div>
@@ -548,6 +577,27 @@ footer{text-align:center;padding:40px 32px 24px;font-size:11px;color:#bbb;letter
     </div>
 
     <div class="clickable-card" onclick="openModal('modal-langassess')">
+      <div class="clickable-card" onclick="openModal('modal-dle')">
+  <div class="card-thumb">
+    <div class="thumb-placeholder"><span class="icon">🏫</span><span>替换为项目截图</span></div>
+  </div>
+  <div class="card-body">
+    <div class="card-title">高中英语教师职业发展培训项目设计</div>
+    <div class="card-desc">Design of Learning Environments · EDUC 6139</div>
+    <div class="card-hint">点击查看详情 →</div>
+  </div>
+</div>
+
+<div class="clickable-card" onclick="openModal('modal-vocabuddy')">
+  <div class="card-thumb">
+    <div class="thumb-placeholder"><span class="icon">🤖</span><span>替换为产品截图</span></div>
+  </div>
+  <div class="card-body">
+    <div class="card-title">Vocabuddy · AI词汇学习工具</div>
+    <div class="card-desc">Programming Fundamentals for Ed Research · EDUC 5913</div>
+    <div class="card-hint">点击查看 →</div>
+  </div>
+</div>
       <div class="card-thumb">
         <div class="thumb-placeholder"><span class="icon">📋</span><span>替换为项目截图</span></div>
       </div>
@@ -725,6 +775,59 @@ footer{text-align:center;padding:40px 32px 24px;font-size:11px;color:#bbb;letter
   </div>
 </div>
 
+<!-- Material: SAT Vocab -->
+<div class="modal-overlay" id="modal-sat-vocab">
+  <div class="modal">
+    <div class="modal-close"><button onclick="closeModal('modal-sat-vocab')">✕ 关闭</button></div>
+    <div class="modal-body">
+      <div class="modal-tag">Teaching Material</div>
+      <h3>SAT机考真题词汇表</h3>
+      <div class="modal-divider"></div>
+      <p>系统整理SAT机考高频真题词汇，结合考试语境分类编排，帮助学员高效备考SAT词汇题型。</p>
+      <div class="modal-text-block">
+        <h4>材料亮点</h4>
+        <ul>
+          <li>基于真题语料提炼，覆盖高频考点词汇</li>
+          <li>结合机考题型特点针对性编排</li>
+          <li>配套例句与辨析说明</li>
+        </ul>
+      </div>
+      <div class="modal-img-stack">
+        <div class="modal-img-slot" style="min-height:220px;"><span class="slot-label">封面</span><span style="font-size:10px;color:#ccc;">替换为封面截图</span></div>
+        <div class="modal-img-slot" style="min-height:220px;"><span class="slot-label">内页示例 1</span></div>
+        <div class="modal-img-slot" style="min-height:220px;"><span class="slot-label">内页示例 2</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Material: TOEFL Analysis -->
+<div class="modal-overlay" id="modal-toefl-analysis">
+  <div class="modal">
+    <div class="modal-close"><button onclick="closeModal('modal-toefl-analysis')">✕ 关闭</button></div>
+    <div class="modal-body">
+      <div class="modal-tag">Teaching Material</div>
+      <h3>托福听力历年考情分析（2018–2025）</h3>
+      <div class="modal-divider"></div>
+      <p>自2018年起连续7年主导广州分校托福听力单项年度考情分析，系统追踪话题分布、题型变化与命题趋势，为教研决策和备考策略提供数据支撑。</p>
+      <div class="modal-text-block">
+        <h4>材料亮点</h4>
+        <ul>
+          <li>覆盖2018–2025年全量考情数据</li>
+          <li>话题分布趋势、题型变化规律可视化分析</li>
+          <li>直接支撑集团考情分析直播内容（2024年3月、2025年2月）</li>
+          <li>为教研组授课调整与材料迭代提供依据</li>
+        </ul>
+      </div>
+      <div class="modal-img-stack">
+        <div class="modal-img-slot" style="min-height:220px;"><span class="slot-label">考情分析报告封面</span><span style="font-size:10px;color:#ccc;">替换为封面截图</span></div>
+        <div class="modal-img-slot" style="min-height:220px;"><span class="slot-label">数据图表示例</span></div>
+        <div class="modal-img-slot" style="min-height:220px;"><span class="slot-label">趋势分析页示例</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Activity: 考情分析 -->
 <div class="modal-overlay" id="modal-act1">
   <div class="modal">
@@ -810,6 +913,35 @@ footer{text-align:center;padding:40px 32px 24px;font-size:11px;color:#bbb;letter
   </div>
 </div>
 
+<!-- Activity: 线上讲座 -->
+<div class="modal-overlay" id="modal-act4">
+  <div class="modal">
+    <div class="modal-close"><button onclick="closeModal('modal-act4')">✕ 关闭</button></div>
+    <div class="modal-body">
+      <div class="modal-tag">Online Lecture</div>
+      <h3>线上讲座</h3>
+      <div class="modal-divider"></div>
+      <div class="modal-text-block">
+        <h4>活动简介</h4>
+        <p style="margin-top:8px;">在此填写线上讲座的具体介绍，包括讲座主题、面向对象、举办平台等。</p>
+      </div>
+      <div class="modal-text-block" style="margin-top:12px;">
+        <h4>活动详情</h4>
+        <ul style="margin-top:8px;">
+          <li><strong>主题：</strong>在此填写</li>
+          <li><strong>平台：</strong>在此填写（如腾讯会议、bilibili直播等）</li>
+          <li><strong>受众：</strong>在此填写</li>
+          <li><strong>场次：</strong>在此填写</li>
+        </ul>
+      </div>
+      <div class="modal-img-stack">
+        <div class="modal-img-slot" style="min-height:200px;"><span class="slot-label">讲座截图 1</span><span style="font-size:10px;color:#ccc;">替换为讲座截图</span></div>
+        <div class="modal-img-slot" style="min-height:200px;"><span class="slot-label">讲座截图 2</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Grad: Phonetics -->
 <div class="modal-overlay" id="modal-phonetics">
   <div class="modal">
@@ -858,6 +990,56 @@ footer{text-align:center;padding:40px 32px 24px;font-size:11px;color:#bbb;letter
       <div class="modal-img-stack">
         <div class="modal-img-slot" style="min-height:220px;"><span class="slot-label">项目截图 1</span></div>
         <div class="modal-img-slot" style="min-height:220px;"><span class="slot-label">项目截图 2</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Grad: Design of Learning Environments -->
+<div class="modal-overlay" id="modal-dle">
+  <div class="modal">
+    <div class="modal-close"><button onclick="closeModal('modal-dle')">✕ 关闭</button></div>
+    <div class="modal-body">
+      <div class="modal-tag">EDUC 6139 · Design of Learning Environments</div>
+      <h3>A Professional Development Program for In-Service High School ESL Teachers in Guangzhou</h3>
+      <div class="modal-divider"></div>
+      <p>面向广州在职高中英语教师设计的职业发展培训项目，结合学习环境设计理论，为教师提供系统化的教学技能提升方案。</p>
+      <div class="modal-text-block">
+        <h4>项目亮点</h4>
+        <ul style="margin-top:8px;">
+          <li>聚焦广州本地在职高中ESL教师的实际需求</li>
+          <li>基于学习环境设计理论框架构建培训体系</li>
+          <li>在此补充更多项目细节</li>
+        </ul>
+      </div>
+      <div class="modal-img-stack">
+        <div class="modal-img-slot" style="min-height:220px;"><span class="slot-label">项目截图 1</span><span style="font-size:10px;color:#ccc;">替换为项目截图</span></div>
+        <div class="modal-img-slot" style="min-height:220px;"><span class="slot-label">项目截图 2</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Grad: Vocabuddy -->
+<div class="modal-overlay" id="modal-vocabuddy">
+  <div class="modal">
+    <div class="modal-close"><button onclick="closeModal('modal-vocabuddy')">✕ 关闭</button></div>
+    <div class="modal-body">
+      <div class="modal-tag">EDUC 5913 · Programming Fundamentals for Educational Research</div>
+      <h3>Vocabuddy · AI词汇学习工具</h3>
+      <div class="modal-divider"></div>
+      <p>基于Python开发的AI驱动词汇学习工具，已部署上线。帮助语言学习者通过智能练习和个性化反馈提升词汇习得效率。</p>
+      <div class="modal-text-block">
+        <h4>项目亮点</h4>
+        <ul style="margin-top:8px;">
+          <li>Python开发，Streamlit部署</li>
+          <li>AI驱动，提供个性化词汇练习与反馈</li>
+          <li>在此补充更多功能介绍</li>
+        </ul>
+      </div>
+      <a class="shadowlab-cta" href="https://vocabuddy-wgkwv8bzcr4f85uxmvu9au.streamlit.app/" target="_blank" rel="noopener" style="margin-bottom:16px;">→ 访问 Vocabuddy</a>
+      <div class="modal-img-stack">
+        <div class="modal-img-slot" style="min-height:220px;"><span class="slot-label">产品截图 1</span><span style="font-size:10px;color:#ccc;">替换为产品截图</span></div>
+        <div class="modal-img-slot" style="min-height:220px;"><span class="slot-label">产品截图 2</span></div>
       </div>
     </div>
   </div>
