@@ -139,6 +139,17 @@ p{color:var(--ink-light);margin-bottom:12px;}
 .modal-text-block{background:var(--bg-tint);padding:20px;margin-top:16px;}
 .modal-text-block h4{font-size:14px;font-weight:500;color:var(--ink);margin-bottom:10px;}
 
+/* CERTS */
+.certs-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:8px;}
+.cert-item{background:var(--white);border:1px solid var(--rule);padding:24px 20px;display:flex;flex-direction:column;gap:6px;}
+.cert-clickable{cursor:pointer;transition:box-shadow .2s,transform .2s;}
+.cert-clickable:hover{box-shadow:0 4px 20px rgba(0,0,0,.08);transform:translateY(-2px);}
+.cert-icon{font-size:24px;}
+.cert-name{font-size:15px;font-weight:500;color:var(--ink);}
+.cert-sub{font-size:12px;color:var(--ink-light);}
+.cert-hint{font-size:11px;color:var(--accent);margin-top:4px;}
+@media(max-width:700px){.certs-row{grid-template-columns:1fr;}}
+
 /* CONTACT */
 #contact{border-top:1px solid var(--rule);padding-top:64px;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px;}
 .contact-links{display:flex;flex-direction:column;gap:8px;align-items:flex-end;}
@@ -215,7 +226,7 @@ footer{text-align:center;padding:40px 32px 24px;font-size:11px;color:#bbb;letter
   <div class="stat"><div class="stat-num">9<span style="font-size:.5em">年</span></div><div class="stat-label">一线教学经验</div></div>
   <div class="stat"><div class="stat-num">8000<span style="font-size:.4em">+</span></div><div class="stat-label">累计授课时长</div></div>
   <div class="stat"><div class="stat-num">50<span style="font-size:.4em">+</span></div><div class="stat-label">教师培训场次</div></div>
-  <div class="stat"><div class="stat-num">30</div><div class="stat-label">+</span></div><div class="stat-label">考试直播及线上讲座</div></div>
+  <div class="stat"><div class="stat-num">30<span style="font-size:.4em">+</span></div><div class="stat-label">考试直播及线上讲座</div></div>
 </div>
 
 <!-- PROFILE / TIMELINE -->
@@ -227,7 +238,7 @@ footer{text-align:center;padding:40px 32px 24px;font-size:11px;color:#bbb;letter
 
     <div class="tl-item">
       <div class="tl-content">
-        <div class="tl-date">2026.7 毕业</div>
+        <div class="tl-date">2015.8 – 2016.8</div>
         <h3>宾夕法尼亚大学</h3>
         <p>教育学硕士，学习科学与技术方向 Learning Sciences and Technologies。GPA 3.93。核心课程：语言测评、学习环境设计、实验语音学、教育研究编程基础。</p>
         <div class="tl-tag-list">
@@ -260,11 +271,10 @@ footer{text-align:center;padding:40px 32px 24px;font-size:11px;color:#bbb;letter
       <div class="tl-content">
         <div class="tl-date">2016 – 2025</div>
         <h3>新航道国际教育集团</h3>
-        <p>主讲托福听力、托福入门词汇、SAT词填、GRE词填。托福听力内训师。广州分校托福耶鲁工作室听力主讲。累计服务学员逾千名，带出上百名高分或满分学员。</p>
+        <p>主讲：托福听力、托福入门词汇、SAT词填、GRE词填。托福听力内训师。广州分校托福耶鲁工作室听力主讲。累计服务学员逾千名，带出上百名高分或满分学员。</p>
         <div class="tl-tag-list">
           <span class="tl-tag">托福听力</span>
-          <span class="tl-tag">SAT · GRE</span>
-          <span class="tl-tag">1000+ 学员</span>
+          <span class="tl-tag">SAT · GRE词填</span>
         </div>
       </div>
       <div class="tl-dot"><div class="tl-dot-inner"></div></div>
@@ -285,7 +295,7 @@ footer{text-align:center;padding:40px 32px 24px;font-size:11px;color:#bbb;letter
       <div class="tl-content">
         <div class="tl-date">2011 – 2015</div>
         <h3>广东工业大学华立学院</h3>
-        <p>英语专业（翻译与口译方向）文学学士。英语专业八级（TEM-8）。</p>
+        <p>英语专业（翻译与口译方向）文学学士。英语专业八级。</p>
         <div class="tl-tag-list">
           <span class="tl-tag">TEM-8</span>
         </div>
@@ -296,6 +306,55 @@ footer{text-align:center;padding:40px 32px 24px;font-size:11px;color:#bbb;letter
 
   </div>
 </section>
+
+<!-- CERTS -->
+<section id="certs">
+  <div class="section-label">Credentials</div>
+  <h2>资格证书</h2>
+  <div class="divider"></div>
+  <div class="certs-row">
+
+    <div class="cert-item">
+      <div class="cert-icon">🎓</div>
+      <div class="cert-name">高中英语教师资格证</div>
+      <div class="cert-sub">全国通用</div>
+    </div>
+
+    <div class="cert-item cert-clickable" onclick="openModal('modal-toefl')">
+      <div class="cert-icon">📄</div>
+      <div class="cert-name">托福考试总分 109</div>
+      <div class="cert-sub">Best 112 · R30 / L30 / S25 / W27</div>
+      <div class="cert-hint">点击查看成绩单 →</div>
+    </div>
+
+    <div class="cert-item">
+      <div class="cert-icon">📝</div>
+      <div class="cert-name">英语专业八级 TEM-8</div>
+      <div class="cert-sub">英语语言文学专业最高级别资格</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TOEFL Modal -->
+<div class="modal-overlay" id="modal-toefl">
+  <div class="modal">
+    <div class="modal-close"><button onclick="closeModal('modal-toefl')">✕ 关闭</button></div>
+    <div class="modal-body">
+      <div class="modal-tag">Test Score</div>
+      <h3>托福考试成绩单</h3>
+      <div class="modal-divider"></div>
+      <p>总分 109，最高分 112（R30 / L30 / S25 / W27）。</p>
+      <div class="modal-img-stack">
+        <div class="modal-img-slot" style="min-height:300px;">
+          <span class="slot-label">成绩单截图</span>
+          <span style="font-size:10px;color:#ccc;">替换为你的托福成绩单截图</span>
+          <!-- 替换方法：在这行下面加一行 <img src="toefl.jpg"> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- TEACHING -->
 <section id="teaching">
