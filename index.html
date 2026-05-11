@@ -88,9 +88,9 @@ p{color:var(--ink-light);margin-bottom:12px;}
 
 /* SHADOWING LAB HERO BLOCK */
 .shadowlab-block{background:var(--white);border:1px solid var(--rule);overflow:hidden;margin-top:8px;}
-.shadowlab-top{display:grid;grid-template-columns:1fr 1fr;}
-.shadowlab-imgs{position:relative;min-height:320px;}
-.shadowlab-img-main{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;}
+.shadowlab-top{display:grid;grid-template-columns:1fr;}
+.shadowlab-imgs{position:relative;height:380px;overflow:hidden;}
+.shadowlab-img-main{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;}
 .shadowlab-img-badge{position:absolute;bottom:12px;right:12px;width:90px;height:90px;object-fit:cover;border:3px solid var(--white);box-shadow:0 2px 10px rgba(0,0,0,.2);}
 .shadowlab-info{padding:36px 32px;display:flex;flex-direction:column;justify-content:center;gap:14px;}
 .shadowlab-info h3{font-family:var(--serif);font-size:24px;font-weight:600;color:var(--ink);line-height:1.3;}
@@ -496,13 +496,13 @@ footer{text-align:center;padding:40px 32px 24px;font-size:11px;color:#bbb;letter
   <div class="shadowlab-block">
     <div class="shadowlab-top">
       <div class="shadowlab-imgs">
-        <img class="shadowlab-img-main" src="assets/img/graduate/capstone-thumb.jpg" alt="ShadowingLab" style="min-height:320px;">
+        <img class="shadowlab-img-main" src="assets/img/graduate/capstone-thumb.jpg" alt="ShadowingLab">
       </div>
       <div class="shadowlab-info">
         <div style="font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:500;">Capstone Project · UPenn GSE 2026</div>
         <h3>ShadowingLab<br>面向EFL学习者的结构化跟读训练学习平台</h3>
         <p>影子跟读本身是一个高负荷的训练任务，ShadowingLab提供技术辅助，拆解成学生能独立完成的结构化流程，并在每一步给予恰当的支撑。平台提供：练习=> 录音=> 对比 => 发现问题 => 有针对性地再练的反馈回路，解决课堂中听力教学缺乏正确方法指引、难检测成效的核心难点。</p>
-        <p>视觉-听觉语音标注、逐句播放模式等内置功能可有效降低认知负荷、回听对比和记录功能强制注意力聚焦，引导学生主动关注语音难点。目前状态：已通过streamlit部署，小范围测试中，主要的核心功能能运作。<p>
+        <p>视觉-听觉语音标注、逐句播放模式等内置功能可有效降低认知负荷、回听对比和记录功能强制注意力聚焦，引导学生主动关注语音难点。目前状态：已通过streamlit部署，原型处于发展阶段，但主要的核心功能能运作。<p>
         <div class="shadowlab-tags">
           <span class="shadowlab-tag">有研究支持的shadowing训练方法</span>
           <span class="shadowlab-tag">技术辅助语言教学&学习</span>
@@ -1033,6 +1033,9 @@ document.addEventListener('keydown', function(e) {
       <div class="modal-tag">Capstone · Phase 1</div>
       <h3>Select · 按难度选择材料</h3>
       <div class="modal-divider"></div>
+      <div class="modal-text-block">
+        <p style="font-size:13.5px;line-height:1.8;color:var(--ink-light);">用户根据自身学习水平，从题库中选择适合的托福 TPO 讲座片段进行跟读练习。材料按难度分级，支持按主题和难度筛选，帮助学习者找到适合当前水平、具有适当挑战性的输入材料。</p>
+      </div>
       <div class="modal-img-stack">
         <div class="modal-img-slot" style="min-height:420px;"><img src="assets/img/graduate/capstone-shadowing1.jpg" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
       </div>
@@ -1047,6 +1050,9 @@ document.addEventListener('keydown', function(e) {
       <div class="modal-tag">Capstone · Phase 2</div>
       <h3>Prepare · 语音标注预览</h3>
       <div class="modal-divider"></div>
+      <div class="modal-text-block">
+        <p style="font-size:13.5px;line-height:1.8;color:var(--ink-light);">学习者在正式跟读前，先熟悉录音和文本内容、清除生词障碍，建立内心模型，降低认知负荷，做好准备。</p>
+      </div>
       <div class="modal-img-stack">
         <div class="modal-img-slot" style="min-height:420px;"><img src="assets/img/graduate/capstone-shadowing2.jpg" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
       </div>
@@ -1061,6 +1067,9 @@ document.addEventListener('keydown', function(e) {
       <div class="modal-tag">Capstone · Phase 3</div>
       <h3>Shadow · 波形同步跟读</h3>
       <div class="modal-divider"></div>
+      <div class="modal-text-block">
+        <p style="font-size:13.5px;line-height:1.8;color:var(--ink-light);">用户与原音同步进行跟读练习。逐句播放模式可降低认知负荷，系统实时显示原音波形并叠加语音标注，提供视觉化语音参考，帮助学习者聚焦语调、节奏与语音特征，实现有意识的模仿练习。</p>
+      </div>
       <div class="modal-img-stack">
         <div class="modal-img-slot" style="min-height:420px;"><img src="assets/img/graduate/capstone-shadowing3.jpg" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
       </div>
@@ -1075,6 +1084,9 @@ document.addEventListener('keydown', function(e) {
       <div class="modal-tag">Capstone · Phase 4</div>
       <h3>Compare · 回放对比记录</h3>
       <div class="modal-divider"></div>
+      <div class="modal-text-block">
+        <p style="font-size:13.5px;line-height:1.8;color:var(--ink-light);">跟读完成后，学习者可回放自己的录音，与原音进行逐句对比。系统记录每次练习数据，并支持添加笔记，帮助学习者识别进步点与待改进项，形成自我监控意识。</p>
+      </div>
       <div class="modal-img-stack">
         <div class="modal-img-slot" style="min-height:420px;"><img src="assets/img/graduate/capstone-shadowing4.jpg" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
       </div>
@@ -1089,6 +1101,9 @@ document.addEventListener('keydown', function(e) {
       <div class="modal-tag">Capstone · Phase 5</div>
       <h3>Capture · AI元认知反思</h3>
       <div class="modal-divider"></div>
+      <div class="modal-text-block">
+        <p style="font-size:13.5px;line-height:1.8;color:var(--ink-light);">AI 引导学习者完成结构化的元认知反思，围绕「注意到了什么」「做到了什么」「下次如何改进」三个维度进行总结，将练习经验转化为可迁移的语音习得意识。</p>
+      </div>
       <div class="modal-img-stack">
         <div class="modal-img-slot" style="min-height:420px;"><img src="assets/img/graduate/capstone-shadowing5.jpg" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
       </div>
